@@ -412,7 +412,7 @@ print(f"Valid email configurations: {valid_configs}")
 
 # Only require default password if no other configs are valid
 if not valid_configs and not SENDER_PASSWORD:
-    raise ValueError('At least one email configuration must be complete (email + password)')
+    print('⚠ Email configuration missing. Email features disabled')
 
 # OAuth2 settings for Office365 (if needed)
 CLIENT_ID = os.getenv('AZURE_CLIENT_ID', '')
